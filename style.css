@@ -1,0 +1,33 @@
+body {
+  margin: 40px;
+  background: #000;
+  color: #fff;
+  font: 14px/1.6 "Courier New", Courier, monospace;
+}
+
+a, pre { color: #0f0; }
+
+p {
+  width: 640px;
+  font-size: 16px;
+  line-height: 2.4;
+}
+p span { border: 1px solid #0f0; padding: 1px 3px; }
+
+.scan { position: relative; margin: 40px 0; }
+.scan img { display: block; width: 100%; }
+.bb { position: absolute; border: 1px solid #0f0; }
+.bb::after {
+  content: attr(data-l);
+  position: absolute;
+  bottom: 100%;
+  left: -1px;
+  background: #0f0;
+  color: #000;
+  font-size: 10px;
+  padding: 0 3px;
+  white-space: nowrap;
+}
+
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
